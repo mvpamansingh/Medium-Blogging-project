@@ -1,0 +1,24 @@
+{
+  "name": "@aman108/medium-project-zod-types",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["zod", "validation", "medium", "blog", "types"],
+  "author": "aman108",
+  "license": "ISC",
+  "description": "Zod validation schemas for Medium project frontend and backend",
+  "dependencies": {
+    "zod": "^3.25.51"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
