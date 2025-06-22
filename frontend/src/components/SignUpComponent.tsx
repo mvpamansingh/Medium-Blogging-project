@@ -1,5 +1,8 @@
 import type { SignupInput } from "@aman108/medium-project-zod-types" 
+import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { BACKEND_URL } from "../CONFIG"
 
 function SignUpAccountComponent()
 {
@@ -14,13 +17,27 @@ function SignUpAccountComponent()
         password: "",
         name: ""
     })
+
+
+    const navigate = useNavigate()
+
+    async function handleSignUp()
+    {
+        const response  = await axios.post(`${BACKEND_URL}/api/v1/signup`,userSignUpInputs)
+        const jwtToken =response.data.token
+        console.log(jwtToken)
+        localStorage.setItem("jwtToken",jwtToken)
+        navigate("/blogspage")
+    }
     return(
         <div className="flex flex-col items-center justify-center  max-w-xl mx-auto h-screen gap-5 ">
         {JSON.stringify(userSignUpInputs)}
             <h1 className="text-3xl font-bold">Create Account</h1>
             <div className="flex flex-row items-center gap-2">
                 <h2 className="text-gray-600 font-medium text-xl">Already have an account?</h2>
-                <h2 className="text-gray-600 font-medium text-xl underline hover:cursor-pointer">Login</h2>
+                <h2 onClick={()=>{
+                    navigate("/signin")
+                }} className="text-gray-600 font-medium text-xl underline hover:cursor-pointer">SignIn</h2>
             </div>
 
             <div className="flex flex-col items-start justify-start w-full gap-2">
@@ -52,7 +69,7 @@ function SignUpAccountComponent()
                 })
             }} className="border-1 w-full rounded-md border-gray-300 px-2 py-2"></input>
 
-            <button className="bg-black text-white px-4 py-2 rounded-md mt-5 hover:bg-gray-600 transition-colors w-full hover:cursor-pointer">Sign Up</button>
+            <button onClick={handleSignUp} className="bg-black text-white px-4 py-2 rounded-md mt-5 hover:bg-gray-600 transition-colors w-full hover:cursor-pointer">Sign Up</button>
             </div>
             
             

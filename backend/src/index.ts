@@ -3,7 +3,7 @@ import { PrismaClient } from './generated/prisma/edge'
 import { withAccelerate } from '@prisma/extension-accelerate'
 import { decode, sign, verify } from 'hono/jwt'
 import { signupInput, signinInput,createBloginput, updateBloginput } from '@aman108/medium-project-zod-types'
-
+import { cors } from 'hono/cors'
 
 
 const app = new Hono<{
@@ -12,6 +12,7 @@ const app = new Hono<{
     secret_key:string
   }
 }>()
+app.use('/*',cors())
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
