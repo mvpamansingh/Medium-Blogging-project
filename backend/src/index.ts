@@ -241,7 +241,7 @@ app.get("api/v1/blog/bulk", async(c)=>{
  
 })
 
-app.get("api/v1/blog/:id", (c)=>{
+app.get("api/v1/blog/:id",async (c)=>{
   const {id} = c.req.param();
 
         const prisma = new PrismaClient({
@@ -249,9 +249,19 @@ app.get("api/v1/blog/:id", (c)=>{
     }).$extends(withAccelerate())
 
     try{
-        const blog = prisma.post.findUnique({
+        const blog =await prisma.post.findUnique({
           where:{
             id:Number(id)
+          },
+          select:{
+            id:true,
+            title:true,
+            content:true,
+            author:{
+              select:{
+                name:true
+              }
+            }
           }
         })
 
@@ -266,8 +276,7 @@ app.get("api/v1/blog/:id", (c)=>{
         error: "Error fetching blog post"
       }, 500)
     }
-  	console.log(id);
-  return c.text("get ablog api")
+  	
 })
 export default app
 

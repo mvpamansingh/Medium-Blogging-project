@@ -26,10 +26,12 @@ function LogInCreateAccount()
         try{
             const respnse = await axios.post(`${BACKEND_URL}/api/v1/user/signin`,userSignInInputs)
             const jwtToken =await  respnse.data.token
-
+        const myUserId = respnse.data.userId
+        const myUserName = respnse.data.name
             console.log(jwtToken)
             localStorage.setItem("jwdtToken",jwtToken)
-
+        localStorage.setItem("myUserId", myUserId)
+        localStorage.setItem("myUserName", myUserName)
             navigate("/blogspage")
         }
         catch(e)

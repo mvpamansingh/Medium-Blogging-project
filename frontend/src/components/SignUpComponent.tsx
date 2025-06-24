@@ -25,8 +25,12 @@ function SignUpAccountComponent()
     {
         const response  = await axios.post(`${BACKEND_URL}/api/v1/signup`,userSignUpInputs)
         const jwtToken =response.data.token
+        const myUserId = response.data.userId
+        const myUserName = response.data.name
         console.log(jwtToken)
         localStorage.setItem("jwtToken",jwtToken)
+        localStorage.setItem("myUserId", myUserId)
+        localStorage.setItem("myUserName", myUserName)
         navigate("/blogspage")
     }
     return(
