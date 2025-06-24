@@ -37,7 +37,8 @@ try{
     {
       data:{
         email:body.email,
-        password: body.password
+        password: body.password,
+        name: body.name
       }
     }
   )
@@ -50,7 +51,9 @@ try{
   // signing / genrating the token
   const token = await sign(payload, secret_key)
   return c.json({
-    token:token
+    token:token,
+    userId:user.id,
+    name:user.name
   })
 }
 catch(e)
@@ -97,7 +100,8 @@ app.post("/api/v1/user/signin", async(c)=>{
     },
     select:{
       email:true,
-      id:true
+      id:true,
+      name:true
     }
   })
 
@@ -106,7 +110,10 @@ app.post("/api/v1/user/signin", async(c)=>{
   }
   const token = await sign(payload, c.env.secret_key)
   return c.json({
-    token:token
+    token:token,
+    userId: user?.id,
+    name:user?.name
+
   })
 })
 
@@ -133,7 +140,7 @@ app.post("/api/v1/blog", async (c)=>{
           data:{
             title:body.title,
             content:body.content,
-            authorId:1
+            authorId:27
           },
           select:{
             title:true,
@@ -206,15 +213,61 @@ app.put("/api/v1/blog", async(c)=>{
     }
   
 })
+
+
+app.get("api/v1/blog/bulk", async(c)=>{
+
+      const prisma = new PrismaClient({
+    datasourceUrl: c.env.DATABASE_URL,
+    }).$extends(withAccelerate())
+
+    const allBlogs =await prisma.post.findMany({
+      select:{
+        id:true,
+        title:true,
+        content:true,
+        published:true,
+        author:{
+          select:{
+            name:true
+          }
+        }
+      }
+    })
+
+    return c.json({
+      allBlogs
+    })
+ 
+})
+
 app.get("api/v1/blog/:id", (c)=>{
   const {id} = c.req.param();
 
+        const prisma = new PrismaClient({
+    datasourceUrl: c.env.DATABASE_URL,
+    }).$extends(withAccelerate())
+
+    try{
+        const blog = prisma.post.findUnique({
+          where:{
+            id:Number(id)
+          }
+        })
+
+        return c.json({
+          blog:blog
+        })
+    }
+    catch(e)
+    {
+      console.log(e);
+      return c.json({
+        error: "Error fetching blog post"
+      }, 500)
+    }
   	console.log(id);
   return c.text("get ablog api")
-})
-
-app.get("api/v1/blog/bulk", (c)=>{
-  return c.text("get aall blogs")
 })
 export default app
 
