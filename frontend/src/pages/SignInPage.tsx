@@ -3,7 +3,7 @@ import { LogInCreateAccount, LoginQuotesComponent } from "../components/LogInCom
 function SignInPage()
 {
     return(
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen pt-20">
             
 
            
