@@ -42,7 +42,7 @@ function BlogCard(blogCardProps:BlogCardProps) {
                     </span>
 
                     <span className="text-gray-400">•</span>
-                    
+
                     <time className="text-gray-600">
                         {formatDate(blogCardProps.publishedDate)}
                     </time>
@@ -65,7 +65,7 @@ function BlogCard(blogCardProps:BlogCardProps) {
                     <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-sm text-gray-500 font-medium">cd
+                    <span className="text-sm text-gray-500 font-medium">
                         {`${Math.ceil(blogCardProps.content.length/100)} min read`}
                     </span>
                 </div>
