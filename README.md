@@ -1,4 +1,4 @@
-# 📝 Medium Clone - Modern Blogging Platform
+# 📝 StoryHub Clone - Modern Blogging Platform
 
 A full-stack modern blogging platform built with **React**, **Hono**, and **Prisma**. Features a beautiful magazine-style UI, serverless backend, and type-safe development experience.
 
@@ -28,6 +28,7 @@ medium/
 ├── common/          # Shared types & validation
 └── README.md
 ```
+<img width="1844" height="953" alt="bloggingArchitecure" src="https://github.com/user-attachments/assets/d5414f24-f0da-4361-90d2-a25e017ae0f4" />
 
 ## 🛠️ Tech Stack
 
@@ -51,6 +52,8 @@ medium/
 - **Validation**: Shared Zod schemas
 - **Types**: TypeScript type definitions
 - **Package**: Published as `@aman108/medium-project-zod-types`
+
+##App Screenshots
 
 ## 📋 Prerequisites
 
