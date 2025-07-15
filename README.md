@@ -7,6 +7,8 @@ A full-stack modern blogging platform built with **React**, **Hono**, and **Pris
 ![Hono](https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
 
 ## ✨ Features
 
@@ -69,7 +71,7 @@ Before running this project, make sure you have:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone <[repository-url](https://github.com/mvpamansingh/Medium-Blogging-project.git)>
 cd medium
 ```
 
@@ -205,6 +207,12 @@ Content-Type: application/json
   "content": "This is the content of my blog post..."
 }
 ```
+## 🗂 App Screenshots
+<img width="1875" height="993" alt="blogpage1" src="https://github.com/user-attachments/assets/3f935d7e-ed42-45a0-b1b0-a197be63a5ad" />
+<img width="1810" height="963" alt="blogpage2" src="https://github.com/user-attachments/assets/b4d4b176-8a7d-4c68-b892-04d0c85ead59" />
+<img width="1821" height="972" alt="createblog" src="https://github.com/user-attachments/assets/c2a6944b-9ff5-4a3c-80f3-3bb45532b742" />
+<img width="1822" height="999" alt="readingpage1" src="https://github.com/user-attachments/assets/7d805d8f-67db-4f9e-8404-acb61fc3fbc2" />
+<img width="1812" height="994" alt="readingpage2" src="https://github.com/user-attachments/assets/9d7a6b1d-45ce-4144-847d-f938116b79b9" />
 
 ## 🗂️ Project Structure
 
@@ -274,16 +282,6 @@ npm run preview  # Preview production build
 npm run lint     # Run ESLint
 ```
 
-## 🎨 UI Components
-
-The project features a modern, professional design with:
-
-- **Hero Sections** - Gradient backgrounds with engaging copy
-- **Magazine Layout** - Clean, readable typography
-- **Interactive Elements** - Hover effects and smooth transitions  
-- **Loading States** - Elegant skeleton loaders
-- **Responsive Design** - Mobile-first approach
-- **Dark/Light Theme** - Consistent color scheme
 
 ## 🔐 Authentication Flow
 
@@ -359,7 +357,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Aman** - [@aman108](https://github.com/aman108)
+**Aman** - [@mvpamansingh](https://github.com/mvpamansingh)
 
 ---
 
