@@ -3,7 +3,7 @@ import { SignUpAccountComponent, SignUpQuoteComponent } from "../components/Sign
 function SignUpPage(){
 
     return(
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen pt-20">
 
             <div className=" bg-white ">
                 <SignUpAccountComponent/>

@@ -9,7 +9,7 @@ function IndividualBlog() {
   
   if(loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 pt-20">
         {/* Hero Skeleton */}
 
         <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -88,7 +88,7 @@ function IndividualBlog() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pt-20">
       <ParticularBlogComponent blog={particularBlog || {
         id: 1,
         title: "",

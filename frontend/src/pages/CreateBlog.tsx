@@ -44,7 +44,7 @@ export const CreateBlog = () => {
     const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 pt-20">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
