@@ -1,4 +1,4 @@
-# 📝 StoryHub Clone - Modern Blogging Platform
+# 📝 StoryHub - Modern Blogging Platform
 
 A full-stack modern blogging platform built with **React**, **Hono**, and **Prisma**. Features a beautiful magazine-style UI, serverless backend, and type-safe development experience.
 
@@ -359,15 +359,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Aman** - [@mvpamansingh](https://github.com/mvpamansingh)
 
----
 
-## 🙏 Acknowledgments
-
-- [Hono](https://hono.dev/) for the amazing serverless framework
-- [Prisma](https://www.prisma.io/) for the excellent database toolkit
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Cloudflare Workers](https://workers.cloudflare.com/) for the edge computing platform
-
----
 
 **⭐ Star this repository if you found it helpful!** 
