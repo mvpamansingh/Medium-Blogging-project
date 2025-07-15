@@ -38,7 +38,7 @@ function BlogsPage() {
                     content={blog.content}
                     publishedDate={blog.published}/>
 
-                    </Link>
+                </Link>
             )
 
                 

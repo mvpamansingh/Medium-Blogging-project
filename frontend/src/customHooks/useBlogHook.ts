@@ -1,11 +1,11 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { BACKEND_URL } from "../CONFIG"
-
+import { type Blog } from "./showParticularBlog"
 const useBlogHook = ()=>{
 
     const [loading , setloading] = useState<boolean>(false)
-    const[blogs, setblogs] = useState([])
+    const[blogs, setblogs] = useState<Blog[]>([])
 
     useEffect(()=>{
 
