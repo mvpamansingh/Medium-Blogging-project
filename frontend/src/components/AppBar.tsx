@@ -7,7 +7,7 @@ function AppBar()
         <div className="flex flex-row justify-between items-center px-7 py-4 border-b border-slate-300 ">
             <Link to ="/blogspage" >
                 <div className="text-xl font-bold text-black hover:cursor-pointer hover:text-gray-600 transition-colors">
-                Medium
+                StoryHub
             </div>
             </Link>
 
